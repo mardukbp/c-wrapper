@@ -1,2 +1,5 @@
-add_executable(wrapperDemo MyMain_c.c)
-target_link_libraries(wrapperDemo LINK_PUBLIC myLib)
+add_library(myLibWrapper MyWrapper.cpp MyWrapper.h)
+
+#add_executable(wrapperDemo MyMain_c.c MyWrapper.cpp MyWrapper.h)
+
+target_link_libraries(myLibWrapper LINK_PUBLIC myLib)
