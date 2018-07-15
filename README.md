@@ -1,11 +1,22 @@
 # C-Wrapper around C++ library
 
-Inspired by an example here: https://www.teddy.ch/c++_library_in_c/
+Checkout to the /tmp directory:
 
-To build:
 ~~~~
-vbaggiol@laptop:~/CLionProjects/c-wrapper$ mkdir build && cd build
-vbaggiol@laptop:~/CLionProjects/c-wrapper/build$ cmake ..
+vbaggiol@laptop:/tmp$ git clone https://github.com/vbaggiol/c-wrapper.git
+Cloning into 'c-wrapper'...
+remote: Counting objects: 29, done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 29 (delta 3), reused 29 (delta 3), pack-reused 0
+Unpacking objects: 100% (29/29), done.
+Checking connectivity... done.
+~~~~
+
+and build:
+~~~~
+vbaggiol@laptop:/tmp$ cd c-wrapper
+vbaggiol@laptop:/tmp/c-wrapper$ mkdir build && cd build
+vbaggiol@laptop:/tmp/c-wrapper/build$ cmake ..
 -- The C compiler identification is GNU 5.4.0
 -- The CXX compiler identification is GNU 5.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -22,19 +33,9 @@ vbaggiol@laptop:~/CLionProjects/c-wrapper/build$ cmake ..
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/vbaggiol/CLionProjects/c-wrapper/build
-vbaggiol@laptop:~/CLionProjects/c-wrapper/build$ make
-Scanning dependencies of target myLib
-[ 20%] Building CXX object src/mylib/CMakeFiles/myLib.dir/MyClass.cpp.o
-[ 40%] Building CXX object src/mylib/CMakeFiles/myLib.dir/MyWrapper.cpp.o
-[ 60%] Linking CXX static library libmyLib.a
-[ 60%] Built target myLib
-Scanning dependencies of target wrapperDemo
-[ 80%] Building C object src/mymain/CMakeFiles/wrapperDemo.dir/MyMain_c.c.o
-[100%] Linking CXX executable wrapperDemo
-[100%] Built target wrapperDemo
-vbaggiol@laptop:~/CLionProjects/c-wrapper/build$ ./src/mymain/wrapperDemo 
-3
- 
+-- Build files have been written to: /tmp/c-wrapper/build
+vbaggiol@laptop:/tmp/c-wrapper/build$ 
 
 ~~~~
+
+This example is inspired from https://www.teddy.ch/c++_library_in_c/ - many thanks!
