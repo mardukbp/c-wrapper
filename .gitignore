@@ -1,4 +1,7 @@
 CMakeFiles/
+obsolete/
+build/
+.idea/
 Makefile
 *.o
 *.a
