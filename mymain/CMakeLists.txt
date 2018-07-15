@@ -1,0 +1,2 @@
+add_executable(wrapperDemo MyMain_c.c)
+target_link_libraries(wrapperDemo LINK_PUBLIC myLib)
